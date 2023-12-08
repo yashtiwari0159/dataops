@@ -11,17 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2'
 
-      - name: Set up Databricks Deploy
-        uses: antstackio/databricks-deploy@v1.0.4
+      - name: Import Notebooks to Databricks
+        uses: microsoft/databricks-import-directory@v1.0.0
         with:
-          # Hostname of the Databricks workspace
-          databricks-host: ${{ secrets.DATABRICKS_HOST }}
-          # Repo Id of the Databricks repo
-          #databricks-repo-id: ${{ secrets.DATABRICKS_REPO_ID }}
-          # The branch of the Databricks repo to update
-          #databricks-repo-branch: main  # Change this to your branch
-          # Databricks token
-          databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          #notebooks-path: '/Users/yash.tiwari@celebaltech.com/Testone'
+           databricks-host: ${{ secrets.DATABRICKS_HOST }}
+           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
+           local-path: ./notebooks/Users/yash.tiwari@celebaltech.com
+           remote-path: /Users/yash.tiwari@celebaltech.com/Testone
