@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
+        
+      - name: install-databricks-cli
+        uses: microsoft/install-databricks-cli@v1.0.0
+            
       - name: Import Notebooks to Databricks
         uses: microsoft/databricks-import-notebook@v1.0.0
         with:
