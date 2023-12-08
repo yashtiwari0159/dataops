@@ -24,4 +24,4 @@ jobs:
           #databricks-repo-branch: main  # Change this to your branch
           # Databricks token
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          notebooks-path: '/Users/yash.tiwari@celebaltech.com/Testone'
+          #notebooks-path: '/Users/yash.tiwari@celebaltech.com/Testone'
